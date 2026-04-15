@@ -4,10 +4,10 @@ const skillCategories = [
         title: "Frontend",
         icon: "✦",
         skills: [
-            { name: "React",       level: 75, label: "Intermediate" },
-            { name: "JavaScript",  level: 70, label: "Intermediate" },
-            { name: "HTML",        level: 90, label: "Advanced"     },
-            { name: "CSS",         level: 85, label: "Advanced"     },
+            { name: "React", level: 80, label: "Advanced" },
+            { name: "JavaScript", level: 80, label: "Advanced" },
+            { name: "HTML and CSS", level: 95, label: "Expert"},
+            { name: "Tailwind CSS", level: 80, label: "Advanced" },
         ],
     },
     {
@@ -15,11 +15,11 @@ const skillCategories = [
         title: "Backend",
         icon: "⬡",
         skills: [
-            { name: "Node.js",    level: 65, label: "Intermediate" },
-            { name: "Express.js", level: 65, label: "Intermediate" },
-            { name: "Java",       level: 60, label: "Intermediate" },
-            { name: "Python",     level: 55, label: "Beginner"     },
-            { name: "PHP",        level: 50, label: "Beginner"     },
+            { name: "Node.js",    level: 75, label: "Advanced" },
+            { name: "Express.js", level: 75, label: "Advanced" },
+            { name: "Java",       level: 80, label: "Advanced" },
+            { name: "Python",     level: 80, label: "Advanced"     },
+            { name: "PHP",        level: 70, label: "Intermediate"     },
         ],
     },
     {
@@ -27,8 +27,9 @@ const skillCategories = [
         title: "Databases",
         icon: "◈",
         skills: [
-            { name: "MongoDB", level: 65, label: "Intermediate" },
-            { name: "SQL",     level: 60, label: "Intermediate" },
+            { name: "MongoDB and Mongoose", level: 85, label: "Expert" },
+            { name: "SQL",     level: 90, label: "Expert" },
+            {name: "Firebase", level: 85, label: "Expert"     },
         ],
     },
     {
@@ -36,22 +37,30 @@ const skillCategories = [
         title: "Tools & Others",
         icon: "⊞",
         skills: [
-            { name: "Git",    level: 70, label: "Intermediate" },
-            { name: "REST API", level: 65, label: "Intermediate" },
+            { name: "Git and GitHub",    level: 95, label: "Expert" },
+            { name: "Postman", level: 60, label: "Intermediate" },
+            {name: "Figma",    level: 85, label: "Advanced" },
+            {name: "Vercel, Cloudflare and Railway", level: 80, label: "Advanced"     },
+            {name: "Pandas", level: 20, label: "Beginner"},
+            {name: "Matplotlib", level: 20, label: "Beginner"},
+            {name: "Scikit-learn", level: 20, label: "Beginner"},
+
         ],
     },
 ]
 
 const labelColor = {
-    Beginner:     "text-amber-400",
-    Intermediate: "text-emerald-400",
+    Beginner:     "text-red-600",
+    Intermediate: "text-amber-400",
     Advanced:     "text-sky-400",
+    Expert:       "text-emerald-500",
 }
 
 const barColor = {
-    Beginner:     "bg-amber-400",
-    Intermediate: "bg-emerald-500",
+    Beginner:     "bg-red-600",
+    Intermediate: "bg-amber-400",
     Advanced:     "bg-sky-400",
+    Expert:       "bg-emerald-500",
 }
 
 function SkillBar({ name, level, label }) {
@@ -99,16 +108,20 @@ function Skills() {
 
                 <div className="flex gap-8 mt-12 justify-center flex-wrap">
                     <div className="flex items-center gap-3 group cursor-pointer">
-                        <div className="w-3 h-3 rounded-full bg-amber-400 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-amber-400/50" />
-                        <span className="text-xs text-gray-400 group-hover:text-amber-400 transition-colors duration-300 font-medium">Beginner</span>
+                        <div className="w-3 h-3 rounded-full bg-red-600 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-red-600/50" />
+                        <span className="text-xs text-gray-400 group-hover:text-red-600 transition-colors duration-300 font-medium">Beginner</span>
                     </div>
                     <div className="flex items-center gap-3 group cursor-pointer">
-                        <div className="w-3 h-3 rounded-full bg-emerald-500 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-emerald-500/50" />
-                        <span className="text-xs text-gray-400 group-hover:text-emerald-400 transition-colors duration-300 font-medium">Intermediate</span>
+                        <div className="w-3 h-3 rounded-full bg-amber-400 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-amber-400/50" />
+                        <span className="text-xs text-gray-400 group-hover:text-amber-400 transition-colors duration-300 font-medium">Intermediate</span>
                     </div>
                     <div className="flex items-center gap-3 group cursor-pointer">
                         <div className="w-3 h-3 rounded-full bg-sky-400 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-sky-400/50" />
                         <span className="text-xs text-gray-400 group-hover:text-sky-400 transition-colors duration-300 font-medium">Advanced</span>
+                    </div>
+                    <div className="flex items-center gap-3 group cursor-pointer">
+                        <div className="w-3 h-3 rounded-full bg-emerald-500 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-emerald-500/50" />
+                        <span className="text-xs text-gray-400 group-hover:text-emerald-500 transition-colors duration-300 font-medium">Expert</span>
                     </div>
                 </div>
             </div>
