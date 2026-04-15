@@ -5,6 +5,7 @@ export const personalInfo = {
     email: "yunilad6@gmail.com",
     github: "https://github.com/yunilaD",
     linkedin: "https://www.linkedin.com/in/yunila-dissanayake",
+    instagram: "https://www.instagram.com/yunila_d",
     resumeUrl: "/Yunila_Dissanayake_CV.pdf",
 }
 
@@ -38,6 +39,13 @@ export const projects = [
         description:"A responsive website focused on promoting UN SDG 15: Life on Land and environmental sustainability.",
         tech: ["HTML", "CSS", "JavaScript"],
         cover:"/covers/greenhorizonCover.png",
+    },
+    {
+        id: 4,
+        title: "Hometeq",
+        description:"A dynamic server-side web application for an online retail platform specializing in smart home technology, built using PHP and MySQL",
+        tech: ["PHP", "MySQL"],
+        cover:"/covers/homteqCover.png",
     }
 ]
 

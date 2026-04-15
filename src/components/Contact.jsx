@@ -35,6 +35,12 @@ function Contact() {
                         <span className="w-0 group-hover:w-4 h-0.5 bg-gradient-to-r from-emerald-400 to-cyan-400 transition-all duration-300"></span>
                     </span>
                     </a>
+                    <a href={personalInfo.instagram} target="_blank" rel="noreferrer" className="group relative text-gray-400 hover:text-emerald-400 transition-all duration-300 text-sm font-medium">
+                    <span className="flex items-center gap-2">
+                        Instagram
+                        <span className="w-0 group-hover:w-4 h-0.5 bg-gradient-to-r from-emerald-400 to-cyan-400 transition-all duration-300"></span>
+                    </span>
+                    </a>
                 </div>
                 <p className="text-gray-600 text-xs mt-12">Built by Yunila Dissanayake</p>
             </div>

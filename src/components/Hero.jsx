@@ -3,7 +3,7 @@ function Hero() {
         name: "Yunila Dissanayake",
         role: "Full Stack Developer",
         bio: "I craft modern, scalable web applications with clean code and intuitive design. Passionate about turning ideas into reality.",
-        resumeUrl: "#",
+        resumeUrl: "/Yunila_Dissanayake_CV.pdf",
         email: "contact@example.com",
         image: "/profilePic.jpeg",
     };

@@ -1,71 +1,146 @@
+import { useState } from "react"
 import { projects } from "../data/portfolio"
 
 function Projects() {
+    const [current, setCurrent] = useState(0)
+
+    const visible = 2
+    const total = projects.length
+
+    const canPrev = current > 0
+    const canNext = current + visible < total
+
+    const prev = () => { if (canPrev) setCurrent(c => c - 1) }
+    const next = () => { if (canNext) setCurrent(c => c + 1) }
+
+    // ✅ FIXED VALUES
+    const CARD_WIDTH = 420
+    const GAP = 24
+    const MOVE = CARD_WIDTH + GAP
+
     return (
-        <section id="projects" className="py-24 bg-gray-900 px-6">
-            <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold text-white mb-2 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Projects</h2>
-                <div className="h-1 w-20 bg-gradient-to-r from-emerald-500 to-cyan-500 mb-8 rounded-full shadow-lg shadow-emerald-500/50"></div>
-                <div className="grid md:grid-cols-2 gap-6">
+        <section id="projects" className="py-24 bg-gray-900">
+
+            <div className="max-w-4xl mx-auto px-6">
+                <h2 className="text-3xl font-bold text-white mb-2">Projects</h2>
+                <div className="w-12 h-1 bg-emerald-500 mb-10"></div>
+            </div>
+
+            {/* SLIDER */}
+            <div className="overflow-hidden w-full">
+
+                <div
+                    className="flex transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+                    style={{
+                        transform: `translateX(-${current * MOVE}px)`,
+                        paddingLeft: "calc((100vw - min(896px, 100vw - 48px)) / 2 + 24px)",
+                        gap: `${GAP}px`,
+                    }}
+                >
                     {projects.map((project, idx) => (
                         <div
                             key={project.id}
-                            className="bg-gradient-to-br from-[#0d0d16] to-[#0a0a12] rounded-xl border border-[#1e3a30]/30 hover:border-emerald-500/30
-                         hover:-translate-y-2 hover:shadow-[0_20px_48px_rgba(16,185,129,0.2)]
-                         transition-all duration-300 overflow-hidden group animate-in fade-in slide-in-from-bottom-4"
-                            style={{ animationDelay: `${idx * 100}ms` }}
+                            style={{
+                                minWidth: `${CARD_WIDTH}px`,
+                                maxWidth: `${CARD_WIDTH}px`,
+                            }}
+                            className={`bg-[#0d0d16] rounded-2xl border transition-all duration-300 overflow-hidden flex-shrink-0
+                ${idx === current || idx === current + 1
+                                ? "border-[#1e2535] opacity-100"
+                                : "border-[#131320] opacity-40"
+                            }
+                hover:border-[#1e3a30] hover:shadow-[0_20px_48px_rgba(0,0,0,0.5)]`}
                         >
-                            {project.cover && (
-                                <div className="w-full h-44 overflow-hidden relative">
+                            {project.cover ? (
+                                <div className="w-full h-48 overflow-hidden">
                                     <img
                                         src={project.cover}
                                         alt={project.title}
-                                        className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                                        className="w-full h-full object-cover opacity-75 hover:opacity-100 hover:scale-105 transition-all duration-700"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d16] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                </div>
+                            ) : (
+                                <div className="w-full h-48 bg-[#0a0a14] flex items-center justify-center">
+                                    <div className="w-12 h-12 rounded-xl border border-[#1e2535] flex items-center justify-center text-emerald-500 text-xl font-bold">
+                                        {project.title[0]}
+                                    </div>
                                 </div>
                             )}
 
                             <div className="p-6">
-                                <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-emerald-400 transition-colors duration-300">{project.title}</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed mb-4">{project.description}</p>
-                                <div className="flex flex-wrap gap-2 mb-5">
+                                <h3 className="text-white font-semibold text-lg mb-2">
+                                    {project.title}
+                                </h3>
+
+                                <p className="text-gray-500 text-sm mb-5">
+                                    {project.description}
+                                </p>
+
+                                <div className="flex flex-wrap gap-1.5 mb-5">
                                     {project.tech.map((t) => (
                                         <span
                                             key={t}
-                                            className="text-xs bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 hover:from-emerald-500/30 hover:to-cyan-500/30 text-emerald-400 px-3 py-1.5 rounded-full border border-emerald-500/30 transition-all duration-300 font-medium"
+                                            className="text-[11px] bg-[#0a1f16] text-emerald-500 px-2 py-1 rounded"
                                         >
-                      {t}
-                    </span>
+                                            {t}
+                                        </span>
                                     ))}
                                 </div>
-                                <div className="flex gap-4">
+
+                                <div className="flex gap-4 pt-4 border-t border-[#131320]">
+
                                     {project.github && (
                                         <a
                                             href={project.github}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="group/link text-gray-400 hover:text-emerald-400 text-sm transition-all duration-300 font-medium flex items-center gap-1"
+                                            className="text-gray-500 hover:text-white text-xs"
                                         >
-                                            GitHub <span className="group-hover/link:translate-x-1 transition-transform duration-300">→</span>
+                                            GitHub →
                                         </a>
                                     )}
+
                                     {project.live && (
                                         <a
                                             href={project.live}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="group/link text-gray-400 hover:text-cyan-400 text-sm transition-all duration-300 font-medium flex items-center gap-1"
+                                            className="text-gray-500 hover:text-emerald-400 text-xs"
                                         >
-                                            Live <span className="group-hover/link:translate-x-1 transition-transform duration-300">→</span>
+                                            Live →
                                         </a>
                                     )}
+
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
+
+            {/* CONTROLS */}
+            <div className="max-w-4xl mx-auto px-6 mt-10 flex justify-center gap-5">
+
+                <button
+                    onClick={prev}
+                    disabled={!canPrev}
+                    className={`w-10 h-10 rounded-full border
+                    ${canPrev ? "border-gray-600 hover:border-emerald-500" : "opacity-30"}`}
+                >
+                    ←
+                </button>
+
+                <button
+                    onClick={next}
+                    disabled={!canNext}
+                    className={`w-10 h-10 rounded-full border
+                    ${canNext ? "border-gray-600 hover:border-emerald-500" : "opacity-30"}`}
+                >
+                    →
+                </button>
+
+            </div>
+
         </section>
     )
 }

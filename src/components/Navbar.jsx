@@ -1,6 +1,6 @@
 import { Link } from "react-scroll"
 
-const navLinks = ["about", "skills", "projects", "experience", "contact"]
+const navLinks = ["about", "skills", "projects", "contact"]
 
 function Navbar() {
     return (
