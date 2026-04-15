@@ -21,8 +21,8 @@ export const projects = [
         title: "StudyMaxx",
         description:"An AI-powered study companion website that helps university students learn, organize, and interact with AI teaching",
         tech:["React","JavaScript","HTML","CSS", "Node.js", "Express.js", "MongoDB", "OpenAI API"],
-        live:"www.studymaxx.lk",
-        cover:"/covers/studymaxx.png",
+        live:"https://www.studymaxx.lk",
+        cover:"/covers/studymaxxCover.png",
     },
     {
         id: 2,
@@ -30,7 +30,14 @@ export const projects = [
         description: "A salon appointment marketplace in Sri Lanka where users can find salons near their location and book appointments",
         tech: ["HTML", "CSS", "JavaScript"],
         live: "https://bookmysalon.yunilad2006.workers.dev/",
-        cover:"/covers/bookMySalon.png",
+        cover:"/covers/bookmysalonCover.png",
+    },
+    {
+        id: 3,
+        title: "Green Horizon",
+        description:"A responsive website focused on promoting UN SDG 15: Life on Land and environmental sustainability.",
+        tech: ["HTML", "CSS", "JavaScript"],
+        cover:"/covers/greenhorizonCover.png",
     }
 ]
 
