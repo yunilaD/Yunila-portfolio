@@ -1,5 +1,5 @@
 const techs = [
-    { name: "React",      img: "/logos/react.svg" },
+    { name: "React",      img: "/logos/react.png" },
     { name: "Node.js",    img: "/logos/nodejs.svg" },
     { name: "Express",    img: "/logos/express.svg" },
     { name: "JavaScript", img: "/logos/javascript.svg" },
