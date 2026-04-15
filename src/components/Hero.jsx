@@ -15,16 +15,21 @@ function Hero() {
                 <a
                     href={personalInfo.resumeUrl}
                     download
-                    className="bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
-                    >
+                    className="bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-semibold px-6 py-3 rounded-lg text-sm
+             transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(16,185,129,0.3)]
+             active:scale-[0.97] active:translate-y-0 active:shadow-none"
+                >
                     Download CV
                 </a>
+
                 <a
-                href={`mailto:${personalInfo.email}`}
-                className="border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white px-6 py-3 rounded-lg transition-colors text-sm"
-                >
-                Get in Touch
-            </a>
+                    href={`mailto:${personalInfo.email}`}
+                    className="border border-gray-700 hover:border-gray-500 text-gray-400 hover:text-white px-6 py-3 rounded-lg text-sm
+                    transition-all duration-150 hover:-translate-y-0.5
+                    active:scale-[0.97] active:translate-y-0"
+                    >
+                    Get in Touch
+                </a>
         </div>
 </div>
 </section>
