@@ -4,12 +4,14 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Contacts from "./components/Contact";
 import Projects from "./components/Projects";
+import TechStripe from "./components/TechStripe";
 
 function App(){
   return (
       <div className="bg-gray-950 min-h-screen">
         <Navbar />
         <Hero />
+        <TechStripe />
         <About />
         <Skills />
         <Projects />
