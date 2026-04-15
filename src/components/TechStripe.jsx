@@ -1,15 +1,14 @@
 const techs = [
     { name: "React",      img: "/logos/react.png" },
-    { name: "Node.js",    img: "/logos/nodejs.svg" },
-    { name: "Express",    img: "/logos/express.svg" },
-    { name: "JavaScript", img: "/logos/javascript.svg" },
-    { name: "MongoDB",    img: "/logos/mongodb.svg" },
-    { name: "Python",     img: "/logos/python.svg" },
-    { name: "Java",       img: "/logos/java.svg" },
-    { name: "PHP",        img: "/logos/php.svg" },
-    { name: "HTML",       img: "/logos/html.svg" },
-    { name: "CSS",        img: "/logos/css.svg" },
-    { name: "SQL",        img: "/logos/sql.svg" },
+    { name: "Node.js",    img: "/logos/nodejs.png" },
+    { name: "Express",    img: "/logos/express.jpg" },
+    { name: "JavaScript", img: "/logos/javascript.jpg" },
+    { name: "MongoDB",    img: "/logos/mongodb.png" },
+    { name: "Python",     img: "/logos/python.png" },
+    { name: "Java",       img: "/logos/java.png" },
+    { name: "PHP",        img: "/logos/php.png" },
+    { name: "HTML",       img: "/logos/html.jpg" },
+    { name: "SQL",        img: "/logos/sql.png" },
 ]
 
 const doubled = [...techs, ...techs]
