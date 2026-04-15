@@ -5,7 +5,7 @@ function Hero() {
         bio: "I craft modern, scalable web applications with clean code and intuitive design. Passionate about turning ideas into reality.",
         resumeUrl: "#",
         email: "contact@example.com",
-        image: "/profile.jpg"
+        image: "/profilePic.jpeg",
     };
 
     return (

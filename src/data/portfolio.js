@@ -1,7 +1,7 @@
 export const personalInfo = {
     name: "Yunila Dissanayake",
     role: "Full Stack Developer",
-    bio: "Software engineering undergraduate based in Colombo, Sri Lanka. I build web applications and enjoy turning ideas into real products.",
+    bio: "I’m a passionate full-stack developer based in Colombo, Sri Lanka, with a strong interest in AI, Machine Learning, and Data Science. I enjoy building modern web applications using technologies like React, Node.js, and MongoDB, while continuously exploring intelligent systems. I’m driven by curiosity and a constant desire to learn, improve, and turn ideas into real-world solutions.",
     email: "yunilad6@gmail.com",
     github: "https://github.com/yunilaD",
     linkedin: "https://www.linkedin.com/in/yunila-dissanayake",
