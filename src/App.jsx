@@ -4,7 +4,6 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Contacts from "./components/Contact";
 import Projects from "./components/Projects";
-import Experiences from "./components/Experience";
 
 function App(){
   return (
