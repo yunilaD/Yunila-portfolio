@@ -57,9 +57,9 @@ const labelColor = {
 }
 
 const barColor = {
-    Beginner:     "bg-red-600",
-    Intermediate: "bg-amber-400",
-    Advanced:     "bg-sky-400",
+    Beginner:     "bg-emerald-500",
+    Intermediate: "bg-emerald-500",
+    Advanced:     "bg-emerald-500",
     Expert:       "bg-emerald-500",
 }
 
@@ -104,25 +104,6 @@ function Skills() {
                             ))}
                         </div>
                     ))}
-                </div>
-
-                <div className="flex gap-8 mt-12 justify-center flex-wrap">
-                    <div className="flex items-center gap-3 group cursor-pointer">
-                        <div className="w-3 h-3 rounded-full bg-red-600 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-red-600/50" />
-                        <span className="text-xs text-gray-400 group-hover:text-red-600 transition-colors duration-300 font-medium">Beginner</span>
-                    </div>
-                    <div className="flex items-center gap-3 group cursor-pointer">
-                        <div className="w-3 h-3 rounded-full bg-amber-400 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-amber-400/50" />
-                        <span className="text-xs text-gray-400 group-hover:text-amber-400 transition-colors duration-300 font-medium">Intermediate</span>
-                    </div>
-                    <div className="flex items-center gap-3 group cursor-pointer">
-                        <div className="w-3 h-3 rounded-full bg-sky-400 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-sky-400/50" />
-                        <span className="text-xs text-gray-400 group-hover:text-sky-400 transition-colors duration-300 font-medium">Advanced</span>
-                    </div>
-                    <div className="flex items-center gap-3 group cursor-pointer">
-                        <div className="w-3 h-3 rounded-full bg-emerald-500 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-emerald-500/50" />
-                        <span className="text-xs text-gray-400 group-hover:text-emerald-500 transition-colors duration-300 font-medium">Expert</span>
-                    </div>
                 </div>
             </div>
         </section>
