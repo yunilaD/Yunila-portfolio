@@ -4,7 +4,7 @@ function Hero() {
         role: "Full Stack Developer",
         bio: "I craft modern, scalable web applications with clean code and intuitive design. Passionate about turning ideas into reality.",
         resumeUrl: "/Yunila_Dissanayake_CV.pdf",
-        email: "contact@example.com",
+        email: "yunilad6@gmail.com",
         image: "/profilePic.jpeg",
     };
 
@@ -57,13 +57,13 @@ function Hero() {
 
                         {/* Social Links */}
                         <div className="flex gap-6 mt-10">
-                            <a href="#" className="group text-gray-400 hover:text-emerald-400 transition-all duration-300">
+                            <a href="https://github.com/yunilaD" className="group text-gray-400 hover:text-emerald-400 transition-all duration-300">
                                 <span className="flex items-center gap-2 text-sm font-medium">
                                     GitHub
                                     <span className="w-0 group-hover:w-4 h-0.5 bg-gradient-to-r from-emerald-400 to-cyan-400 transition-all duration-300"></span>
                                 </span>
                             </a>
-                            <a href="#" className="group text-gray-400 hover:text-emerald-400 transition-all duration-300">
+                            <a href="https://www.linkedin.com/in/yunila-dissanayake" className="group text-gray-400 hover:text-emerald-400 transition-all duration-300">
                                 <span className="flex items-center gap-2 text-sm font-medium">
                                     LinkedIn
                                     <span className="w-0 group-hover:w-4 h-0.5 bg-gradient-to-r from-emerald-400 to-cyan-400 transition-all duration-300"></span>

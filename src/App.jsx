@@ -12,8 +12,8 @@ function App(){
         <Navbar />
         <Hero />
         <About />
-        <Projects />
         <TechStripe />
+        <Projects />
         <Skills />
         <Contacts />
       </div>

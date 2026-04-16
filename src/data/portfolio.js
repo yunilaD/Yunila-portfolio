@@ -29,7 +29,7 @@ export const projects = [
         id: 2,
         title: "BookMySalon",
         description: "A salon appointment marketplace in Sri Lanka where users can find salons near their location and book appointments",
-        tech: ["HTML", "CSS", "JavaScript"],
+        tech: ["HTML", "CSS", "JavaScript","Firebase"],
         live: "https://bookmysalon.yunilad2006.workers.dev/",
         cover:"/covers/bookmysalonCover.png",
     },
