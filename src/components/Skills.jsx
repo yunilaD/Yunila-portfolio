@@ -41,9 +41,8 @@ const skillCategories = [
             { name: "Postman", level: 60, label: "Intermediate" },
             {name: "Figma",    level: 85, label: "Advanced" },
             {name: "Vercel, Cloudflare and Railway", level: 80, label: "Advanced"     },
-            {name: "Pandas", level: 20, label: "Beginner"},
-            {name: "Matplotlib", level: 20, label: "Beginner"},
-            {name: "Scikit-learn", level: 20, label: "Beginner"},
+            {name: "Apache Spark", level: 10, label: "Beginner"},
+            {name: "Apache Hadoop", level: 10, label: "Beginner"},
 
         ],
     },
