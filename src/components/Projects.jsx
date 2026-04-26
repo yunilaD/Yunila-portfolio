@@ -4,7 +4,7 @@ import { projects } from "../data/portfolio"
 function Projects() {
     const [current, setCurrent] = useState(0)
 
-    const visible = 2
+    const visible = 1
     const total = projects.length
 
     const canPrev = current > 0

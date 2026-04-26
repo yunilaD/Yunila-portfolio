@@ -35,10 +35,10 @@ export const projects = [
     },
     {
         id: 3,
-        title: "Green Horizon",
-        description:"A responsive website focused on promoting UN SDG 15: Life on Land and environmental sustainability.",
-        tech: ["HTML", "CSS", "JavaScript"],
-        cover:"/covers/greenhorizonCover.png",
+        title: "React Onboarding Wizard",
+        description:"A 3-step onboarding form wizard featuring form validation, dynamic skill selection, avatar upload preview, and persistent state across steps.",
+        tech: ["React","TypeScript","Vite","CSS"],
+        cover:"/covers/wizard.png",
     },
     {
         id: 4,
@@ -46,6 +46,14 @@ export const projects = [
         description:"A dynamic server-side web application for an online retail platform specializing in smart home technology, built using PHP and MySQL",
         tech: ["PHP", "MySQL"],
         cover:"/covers/homteqCover.png",
+
+    },
+    {
+        id: 5,
+        title: "Green Horizon",
+        description:"A responsive website focused on promoting UN SDG 15: Life on Land and environmental sustainability.",
+        tech: ["HTML", "CSS", "JavaScript"],
+        cover:"/covers/greenhorizonCover.png",
     }
 ]
 
